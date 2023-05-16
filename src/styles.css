@@ -4,25 +4,37 @@ h1 {
   padding: 0;
 }
 .repeater {
-  background-color: orange;
-  padding-top: 10px;
-
-  &__content {
-    background-color: red;
-  }
+  background-color: white;
+  padding-top: 100px;
 
   &__background {
     background-image: url('assets/pattern-wave.svg');
     background-repeat: repeat-x;
     background-size: 800px 120px;
-    background-position: center;
+    background-position: 0 0;
     height: 120px;
     width: 100%;
+    animation: bg-scrolling-reverse 60s infinite;
+    animation-timing-function: linear;
     
     @media (min-width: 768px) {
       background-size: 1600px 241px;
       height: 241px;
     }
+  }
+
+  &__content {
+    background-color: #EEF0F7;
+    padding-bottom: 100px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  0% {
+    background-position: 0 0; 
+  }
+  100% {
+    background-position: 1600px 0px; 
   }
 }
 
