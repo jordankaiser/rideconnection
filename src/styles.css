@@ -42,3 +42,101 @@ h1 {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.cityscape {
+  position: relative;
+  background-color: #023F2E;
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 100px;
+
+  /* Content */
+  &__content {
+    position: relative;
+    padding: 100px 0 280px;
+  }
+
+  /* Artwork */
+  &__artwork {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 225px;
+  }
+
+  /* Clouds 1 */
+  &__clouds-1 {
+    background-image: url('assets/cityscape/cityscape-01.png');
+    background-repeat: repeat-x;
+    background-size: 1440px 225px;
+    background-position: 0 0;
+    height: 225px;
+    width: 100%;
+    animation: cloud-pan 150s infinite;
+    animation-timing-function: linear;
+  }
+
+  /* Green buildings */
+  &__green-buildings {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('assets/cityscape/cityscape-02.svg');
+    background-repeat: no-repeat;
+    background-size: 1440px 225px;
+    background-position: center;
+    height: 225px;
+    width: 100%;
+  }
+
+  /* Clouds 2 */
+  &__clouds-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('assets/cityscape/cityscape-03.png');
+    background-repeat: repeat-x;
+    background-size: 1440px 225px;
+    background-position: 0 0;
+    height: 225px;
+    width: 100%;
+    animation: cloud-pan 180s infinite;
+    animation-timing-function: linear;
+  }
+
+  /* Green buildings */
+  &__buildings {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('assets/cityscape/cityscape-04.svg');
+    background-repeat: no-repeat;
+    background-size: 1440px 225px;
+    background-position: center;
+    height: 225px;
+    width: 100%;
+  }
+
+  /* Road */
+  &__road {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('assets/cityscape/cityscape-road-pattern.svg');
+    background-repeat: repeat-x;
+    background-size: 20px 14px;
+    background-position: 0 0;
+    height: 14px;
+    width: 100%;
+  }
+}
+
+@keyframes cloud-pan {
+  0% {
+    background-position: 0 0; 
+  }
+  100% {
+    background-position: 1440px 0px; 
+  }
+}
