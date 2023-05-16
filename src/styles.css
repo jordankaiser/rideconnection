@@ -14,8 +14,15 @@ h1 {
   &__background {
     background-image: url('assets/pattern-wave.svg');
     background-repeat: repeat-x;
-    height: 241px;
+    background-size: 800px 120px;
+    background-position: center;
+    height: 120px;
     width: 100%;
+    
+    @media (min-width: 768px) {
+      background-size: 1600px 241px;
+      height: 241px;
+    }
   }
 }
 
