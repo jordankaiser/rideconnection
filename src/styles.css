@@ -9,11 +9,6 @@ h1 {
 
   &__content {
     background-color: red;
-
-    &__wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
   }
 
   &__background {
@@ -22,4 +17,9 @@ h1 {
     height: 241px;
     width: 100%;
   }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }

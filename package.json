@@ -1,4 +1,10 @@
 {
+  "name": "ride-connection",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
     "parcel": "^2.8.3",
     "postcss-nested": "^6.0.1"
