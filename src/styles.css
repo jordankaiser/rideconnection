@@ -1,0 +1,25 @@
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+.repeater {
+  background-color: orange;
+  padding-top: 10px;
+
+  &__content {
+    background-color: red;
+
+    &__wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+
+  &__background {
+    background-image: url('assets/pattern-wave.svg');
+    background-repeat: repeat-x;
+    height: 241px;
+    width: 100%;
+  }
+}
