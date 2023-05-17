@@ -140,3 +140,31 @@ h1 {
     background-position: 1440px 0px; 
   }
 }
+
+.header {
+  background: lightgrey;
+  margin-bottom: 100px;
+  padding: 20px 0;
+
+  ul {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      position: relative;
+
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        gap: 10px;
+        top: 100%;
+        left: 0;
+      }
+    }
+  }
+}
