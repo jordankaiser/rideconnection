@@ -2,6 +2,7 @@ body,
 h1 {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 .repeater {
   background-color: white;
@@ -157,13 +158,44 @@ h1 {
     li {
       position: relative;
 
-      ul {
+      .drop-down-menu {
         display: none;
         position: absolute;
         flex-direction: column;
         gap: 10px;
         top: 100%;
         left: 0;
+        padding: 20px 20px;
+
+        &__background-1, 
+        &__background-2,
+        &__background-3 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: white;
+          transform-origin: top left;
+        }
+
+        &__background-1 {
+          background: white;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          left: -1px;
+          top: -1px;
+        }
+
+        &__background-2 {
+          background: #BCD3A6;
+          bordr-radius: 0 0 4px 4px;
+        }
+        &__background-3 {
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+          background: #D5E7ED;
+          bordr-radius: 0 0 4px 4px;
+        }
       }
     }
   }

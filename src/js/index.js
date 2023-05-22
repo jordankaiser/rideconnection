@@ -12,12 +12,42 @@ headerSubmenus.forEach((submenu) => {
   });
 
   // Add animation to the submenu.
-  submenuTimeline.fromTo(submenu, {
+  submenuTimeline.fromTo(submenu.querySelector('.drop-down-menu__background-3'), {
+    scaleY: .25,
     opacity: 0,
-    duration: 1
   }, {
     opacity: 1,
+    scaleY: 1,
+    duration: 0.5,
+    ease: "power4.out",
   });
+  submenuTimeline.fromTo(submenu.querySelector('.drop-down-menu__background-2'), {
+    scaleY: .25,
+    opacity: 0,
+  }, {
+    opacity: 1,
+    scaleY: 1,
+    duration: 0.5,
+    ease: "power4.out",
+  }, '-=0.4');
+  submenuTimeline.fromTo(submenu.querySelector('.drop-down-menu__background-1'), {
+    scaleY: .25,
+    opacity: 0,
+  }, {
+    opacity: 1,
+    scaleY: 1,
+    duration: 0.5,
+    ease: "power4.out",
+  }, '-=0.4');
+  submenuTimeline.fromTo(submenu.querySelectorAll('li:not([class*="drop-down-menu__background"])'), {
+    opacity: 0,
+    x: -10,
+  }, {
+    opacity: 1,
+    duration: 0.5,
+    x: 0,
+    stagger: 0.1,
+  }, '-=0.4');
 
   // Add animation to the submenu element.
   submenu.animation = submenuTimeline;
@@ -41,7 +71,7 @@ headerLinks.forEach((link) => {
 
     if (submenu) {
       // Play the animation.
-      submenu.animation.play();
+      submenu.animation.timeScale(1).play();
     }
   });
   link.addEventListener('mouseleave', () => {
@@ -49,7 +79,7 @@ headerLinks.forEach((link) => {
 
     if (submenu) {
       // Reverse the animation.
-      submenu.animation.reverse();
+      submenu.animation.timeScale(1.5).reverse();
     }
   });
 });
