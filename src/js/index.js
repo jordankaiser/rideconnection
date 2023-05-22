@@ -31,14 +31,14 @@ headerSubmenus.forEach((submenu) => {
     ease: "power4.out",
   }, '-=0.4');
   submenuTimeline.fromTo(submenu.querySelector('.drop-down-menu__background-1'), {
-    scaleY: .25,
+    scaleY: 0,
     opacity: 0,
   }, {
     opacity: 1,
     scaleY: 1,
     duration: 0.5,
     ease: "power4.out",
-  }, '-=0.4');
+  }, '-=0.45');
   submenuTimeline.fromTo(submenu.querySelectorAll('li:not([class*="drop-down-menu__background"])'), {
     opacity: 0,
     x: -10,
